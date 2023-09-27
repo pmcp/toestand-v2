@@ -1,0 +1,7 @@
+title: Partners
+sites:
+  - default
+  - fr
+  - en
+structure:
+  max_depth: 1

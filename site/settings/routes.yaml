@@ -1,0 +1,25 @@
+routes:
+  /search: search
+collections:
+  news:
+    nl: '/nieuws/{slug}'
+    en: '/news/{slug}'
+    fr: '/nouvelles/{slug}'
+redirect:
+  /biestebroekbis: /projecten/biestebroekbis
+  /biestebroekbisnl: /projecten/biestebroekbis
+  /biestebroekbisfr: /fr/projets/biestebroekbis
+  /biestebroekbisen: /en/projects/biestebroekbis
+  /alleedukaainl: /projecten/alleedukaai
+  /alleedukaaifr: /fr/projets/alleedukaai
+  /alleedukaai/fr: /fr/projets/alleedukaai
+  /alleedukaaien: en/projects/alleedukaai
+  /leegstondfr: /fr/leegstond
+  /leegstonden: en/leegstond
+  /leegstondnl: /leegstond
+vanity:
+  /contact: /projecten/contact
+  /alleedukaai: /projecten/alleedukaai
+  /biestebroekbis: /projecten/biestebroekbis
+  /in-limbo: /projecten/in-limbo
+  /marie-moskou: /projecten/afgelopen-projecten/marie-moskou

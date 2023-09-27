@@ -1,0 +1,49 @@
+
+<article class="padding-y-md">    
+  <header class="container max-width-xxl margin-bottom-lg">
+    {{ if thumb }}
+      
+      <figure class="container max-width-lg margin-bottom-lg">
+        <img class="width-100%"src="{{ thumb }}" alt="Image description">
+      </figure>      
+    {{ /if }}
+    <div class="text-component text-center line-height-lg v-space-md margin-bottom-md">
+      <h1 class="text-lg">{{ title }}</h1>
+    </div>
+  </header>
+  
+  <div class="container max-width-adaptive-xxl padding-bottom-xxl grid justify-center">
+    
+
+
+
+  <div class="article">
+  {{ if content_bard }}
+    {{ content_bard }}
+      {{ if type == "text" }}
+        <div class="text container text-component max-width-sm">
+          {{ text }}
+        </div>
+      {{ elseif type == "image" }}
+        {{ partial src="bard__image"}}
+      {{ elseif type == "video" }}
+      
+        {{ partial src="bard__video"}}
+      {{ elseif type == "embed" }}
+        {{ partial src="bard__embed"}}
+      {{ /if }}
+    {{ /content_bard }}
+  {{ /if }}
+         
+  </div>
+
+  </article>
+  <div class="container toestand-article__moreArticles padding-y-md" >    
+      <div class="grid grid-gap-lg toestand-article__moreArticles__articles margin-top-xl">
+        {{ collection from="news" scope="article"}}
+          {{ if article:live == 1 && article:show_home == 1 }}
+            {{ partial:article_inList}}
+          {{ /if }}
+        {{ /collection }}    
+      </div>
+      </div>

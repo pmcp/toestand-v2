@@ -1,0 +1,5 @@
+debug: false
+loggers:
+  file:
+    browser: true
+    daily: true

@@ -1,0 +1,23 @@
+sections:
+  main:
+    display: Main
+    fields:
+      section__general:
+        fieldset: section__main
+        type: partial
+        display: Algemeen
+        localizable: true
+      bg__image:
+        type: toggle
+        display: Achtergrondafbeelding
+      collection:
+        max_items: 10
+        type: collections
+        display: Collection
+      style:
+        type: hidden
+        display: style
+        default: carousel
+taxonomies: false
+title: 'Sectie: Artikels'
+hide: true

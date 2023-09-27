@@ -1,0 +1,27 @@
+title: 'Main Assets'
+path: assets
+url: /assets
+assets:
+  toestandlogokleintransparant.png:
+    title: toestandklein
+  events/alleedukaai/partners/skateadkweb.jpg:
+    focus: 43-57
+  inlimbo/adele_pautrat_20.jpg:
+    title: 'foto''s: Adèle Pautrat'
+    alt: '(c) Adèle Pautrat'
+  events/alleedukaai/14810736717_99b922605c_b.jpg:
+    title: 'Sur la pelouse'
+  119609562_1547678168744896_183207159382296285_o.jpg:
+    title: 'Allee du Kaai Open'
+    alt: 'ADK Open'
+  140994204_3673501912697769_3025589315898368659_n.jpg:
+    focus: 68-80
+  pdf/2021-08---allee-du-kaai---vacature.pdf:
+    title: 'Vacature Allee du Kaai'
+  pdf/2021-08---coordinatie-korenbeek---vacature.pdf:
+    title: 'Vacature Korenbeek'
+  banner_international22_tekengebied-1.jpg:
+    title: 'Brussels International Exchange'
+    alt: 'Brussels International Exchange'
+  screenshot-2023-02-27-at-12.10.26.png:
+    title: 'Parc West Open'

@@ -1,0 +1,25 @@
+sections:
+  main:
+    display: Main
+    fields:
+      schedule-weekday__day:
+        type: text
+        display: 'Naam van de dag'
+      schedule-weekday__container:
+        mode: stacked
+        fields:
+          schedule-weekday__time:
+            type: text
+            display: Tijd
+          schedule-weekday__text:
+            restrict_assets: false
+            type: redactor
+            display: Activiteit
+        type: grid
+        display: Activiteit
+        localizable: true
+        add_row: 'Voeg activiteit toe'
+taxonomies: true
+title: Weekdag
+create_title: 'Nieuwe activiteit'
+hide: true

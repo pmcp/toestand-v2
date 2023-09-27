@@ -1,0 +1,11 @@
+taxonomies: false
+title: 'Sectie: Activiteiten'
+fields:
+  -
+    import: section__main
+  -
+    handle: style
+    field:
+      type: hidden
+      display: style
+      default: carousel

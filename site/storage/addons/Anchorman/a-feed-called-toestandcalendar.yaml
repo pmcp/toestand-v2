@@ -1,0 +1,19 @@
+url: 'https://zapier.com/engine/rss/3996370/toestandcalendar/'
+enabled: true
+scheduling: '1'
+status: draft
+cache: false
+query: false
+feed_title: 'A Feed Called toestandcalendar'
+feed_permalink: 'https://zapier.com/'
+publish_to: events
+item_title: '@ron:title'
+item_description: '@ron:description'
+item_content: '@ron:description'
+item_permalink: '@ron:link'
+author_options: assign
+item_author: 164f45aa-c7e6-493c-a3b6-68d3c93fa272
+item_authors: '@ron:author'
+item_thumbnail: '@ron:intro_image'
+save_images: false
+updated: 1557740374

@@ -1,0 +1,44 @@
+<section class="to
+asdfsadfsestand-section article-gallery padding-bottom-xl toestand-partners margin-top-xl " >
+  <header class=" max-width-xxl margin-bottom-lg toestand-section__content">
+    {{ if thumb }}
+      <!-- <figure class="container max-width-lg margin-bottom-lg media-wrapper" style="padding-bottom:26.67%"> -->
+        <figure class="container max-width-lg margin-bottom-lg media-wrapper">
+        <img src="{{ thumb }}" alt="Image description">
+      </figure>      
+    {{ /if }}
+    <div class="text-component line-height-lg v-space-md margin-bottom-md" >
+      <h1 class="text-lg">{{ title }}</h1>
+    </div>
+  </header>
+  <div class="parent grid grid-gap-md toestand-section__content">
+    {{ nav max_depth="4" folders_only="false" scope="page" include_content="true" }}
+      <article class="  toestand-article--two grid  col-12 margin-bottom-md">
+        {{ assets:page:main__image }} 
+          <figure class=" col-12  col-4@sm padding-y-sm">
+            <img src="{{ glide:url height=" 400 "  width="auto " }} " >
+          </figure>        
+        {{ /assets:page:main__image }}
+        <div class="toestand-partners__text col-12 col-8@sm padding-left-md">
+          <div class="text-component">
+            <h3 class="story-v2__headline ">
+              
+             {{ page:title }}
+            </h3>
+            <div class="story-v2__excerpt">
+              {{ sections }}
+                {{ if type == 'section__item--header' }}
+                  {{ description }}
+                {{ /if }}
+              {{ /sections }}
+              {{ page:text }}
+              <a style="display:inline-flex" class="toestand-buttons__button padding-x-xs padding-y-xxs" href="{{ url | dashify }}">
+                Bekijk
+              </a>
+            </div>
+          </div>
+        </div>
+      </article> 
+      {{ /nav }}
+  </div>
+</section>

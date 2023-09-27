@@ -1,0 +1,18 @@
+sections:
+  sections:
+    display: Secties
+    fields:
+      -
+        import: sections
+  info:
+    display: Info
+    fields:
+      -
+        import: project__info
+  footer:
+    display: Footer
+    fields:
+      -
+        import: main_footer
+taxonomies: true
+title: 'Project Pagina'

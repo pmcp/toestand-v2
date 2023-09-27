@@ -1,0 +1,22 @@
+<main class="toestand-main">
+{{ sections }}
+  {{ if type == 'section__item--header' }}
+    {{ partial:section__projectheader :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--activities' }}
+    {{ partial:section__weekly :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--weekly' }}
+    {{ partial:section__weekly :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--mission' }}
+    {{ partial:section__mission :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--articles' }}
+    {{ partial:section__articles :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--pages' }}
+    {{ partial:section__pages :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--images' }}
+    {{ partial:section__images :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--text' }}
+    {{ partial:section__text :title="title" :type="type" :style="style" }}
+  {{ else }}
+  {{ /if }}
+{{ /sections }}
+</main>

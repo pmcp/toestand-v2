@@ -1,0 +1,25 @@
+sections:
+  sections:
+    display: Secties
+    fields:
+      home__sections:
+        fieldset: sections
+        type: partial
+        display: Secties
+  info:
+    display: Info
+    fields:
+      info:
+        fieldset: project__info
+        type: partial
+        display: Info
+  footer:
+    display: Footer
+    fields:
+      footer:
+        fieldset: main_footer
+        type: partial
+        localizable: true
+        display: footer
+taxonomies: true
+title: 'Project Pagina'

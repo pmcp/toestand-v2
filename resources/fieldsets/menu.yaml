@@ -1,0 +1,110 @@
+taxonomies: true
+title: menu_item
+fields:
+  -
+    handle: menu_item
+    field:
+      type: replicator
+      sets:
+        news:
+          display: Nieuws
+          fields:
+            -
+              handle: menu_item
+              field:
+                type: entries
+                display: 'Menu Item'
+                mode: tags
+                collections:
+                  - news
+            -
+              handle: override
+              field:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+        project:
+          display: Project
+          fields:
+            -
+              handle: menu_item
+              field:
+                type: entries
+                display: 'Menu Item'
+                mode: tags
+                collections:
+                  - projects
+            -
+              handle: override
+              field:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+        page:
+          display: Pagina
+          fields:
+            -
+              handle: menu_item
+              field:
+                type: entries
+                display: Pagina
+                collections:
+                  - pages
+            -
+              handle: override
+              field:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+        page_part:
+          display: 'Onderdeel op pagina'
+          fields:
+            -
+              handle: menu_item
+              field:
+                type: entries
+                display: Pagina
+                collections:
+                  - pages
+            -
+              handle: id_on_page
+              field:
+                type: text
+                display: Onderdeel
+            -
+              handle: override
+              field:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+        project_part:
+          display: 'Onderdeel op project'
+          fields:
+            -
+              handle: menu_item
+              field:
+                type: entries
+                display: Project
+                max_items: '1'
+                collections:
+                  - projects
+            -
+              handle: id_on_page
+              field:
+                type: text
+                display: Onderdeel
+            -
+              handle: override
+              field:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+      localizable: true
+      display: 'Menu Item'
+      instructions: 'Kies 1 item (niet meer!)'
+  -
+    handle: highlight
+    field:
+      type: toggle
+      instructions: 'Wil je dit menu element een opvallende kleur geven?'
+      display: highlight

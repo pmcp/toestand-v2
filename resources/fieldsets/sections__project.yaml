@@ -1,0 +1,55 @@
+taxonomies: false
+title: 'Secties: Project'
+fields:
+  -
+    handle: sections
+    field:
+      type: replicator
+      sets:
+        section__item--header:
+          display: 'Sectie: Header'
+          fields:
+            -
+              import: section__item--header
+        section__item--weekly:
+          display: 'Sectie: Agenda'
+          fields:
+            -
+              import: section__item--weekly
+        section__item--images:
+          display: 'Sectie: Afbeeldingen'
+          fields:
+            -
+              import: section__item--images
+        section__item--pages:
+          display: 'Sectie: Paginas'
+          fields:
+            -
+              import: section__item--pages
+        section__item--mail:
+          display: 'Sectie: Mailing'
+          fields:
+            -
+              import: section__item--mail
+        section__item--articles:
+          display: 'Sectie: Artikels'
+          fields:
+            -
+              import: section__item--articles
+        section__item--contact:
+          display: 'Sectie: Contact'
+          fields:
+            -
+              import: section__item--contact
+        section__item--mission:
+          display: 'Sectie: Missie'
+          fields:
+            -
+              import: section__item--mission
+        section__item--text:
+          display: 'Sectie: Tekst'
+          fields:
+            -
+              import: section__item--text
+      display: Secties
+      localizable: true

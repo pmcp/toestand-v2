@@ -1,0 +1,128 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: content_bard
+        field:
+          type: bard
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+          style: sans
+          spellcheck: true
+          allow_source: true
+          allow_internal_links: true
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          semantic_elements: false
+          restrict_assets: false
+          localizable: true
+          display: content
+          sets:
+            image:
+              display: Afbeelding
+              fields:
+                -
+                  handle: value
+                  field:
+                    type: assets
+                    container: main
+                    folder: /
+                    restrict: false
+                    display: Afbeelding
+            video:
+              display: Video
+              fields:
+                -
+                  handle: value
+                  field:
+                    type: video
+                    display: Video
+            embed:
+              display: embed
+              fields:
+                -
+                  handle: value
+                  field:
+                    type: textarea
+                    display: embed
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          display: Titel
+          localizable: true
+      -
+        handle: thumb
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          display: Foto
+          max_files: 1
+      -
+        handle: live
+        field:
+          type: toggle
+          display: Gepubliceerd
+          width: 50
+      -
+        handle: show_home
+        field:
+          type: toggle
+          width: 50
+          display: 'Toon in overzicht'
+      -
+        handle: descr
+        field:
+          type: bard
+          restrict_assets: false
+          localizable: true
+          display: 'Kort inleidend tekstje'
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+      -
+        handle: published_on
+        field:
+          type: date
+          display: Datum
+          allow_blank: false
+          require_time: false
+          earliest_date: 'January 1, 1900'
+          time_enabled: true
+      -
+        handle: connections
+        field:
+          type: entries
+          display: 'Hoort bij'
+          collections:
+            - pages
+taxonomies: false
+title: 'Pagina: Artikel'

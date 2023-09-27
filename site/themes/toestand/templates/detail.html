@@ -1,0 +1,64 @@
+
+<article class="padding-y-lg toestand-breadcrumb {">
+  <header class="container max-width-md  margin-bottom-lg">
+    {{ if article-header__image }}
+      {{ assets:article-header__image }}
+        <figure class=" max-width-lg margin-bottom-lg">
+          <img src="{{ url }}" alt="Image description">
+        </figure>    
+      {{ /assets:article-header__image }}
+    {{ /if }}  
+      
+    <div class="text-component text-center line-height-lg v-space-md margin-bottom-md">
+      {{ if title }}
+        <h1 class="text-xl ">{{ title }}</h1>
+      {{ /if }}
+    </div>
+  </header>
+  {{ if intro }}
+  <div class="container max-width-sm text-component article padding-bottom-md">
+      {{ intro }}
+    </div>
+  {{ /if }}
+  
+
+  </div>
+
+  <div class="article">
+    
+      {{ if article-sections }}
+          {{ article-sections }}
+            <div id="{{section_title | dashify}}">
+              {{ if section_title }}
+              <div class="text container text-component max-width-sm padding-top-md">
+                <h2>{{ section_title }}</h2>
+              </div>
+
+              {{ /if }}
+              {{ if bard }}
+                {{ bard }}
+                  {{ if type == "text" }}
+                    <div class="text container text-component max-width-sm">
+                      {{ text }}
+                    </div>
+                  {{ elseif type == "image" }}
+                  
+                    {{ partial src="bard__image"}}
+                  {{ elseif type == "video" }}
+                  
+                    {{ partial src="bard__video"}}
+                  {{ /if }}
+                {{ /bard }}
+              {{ /if }}
+            </div>
+          {{ /article-sections }}
+
+      {{ /if }} 
+    </div>
+
+
+  
+
+  </article>
+
+

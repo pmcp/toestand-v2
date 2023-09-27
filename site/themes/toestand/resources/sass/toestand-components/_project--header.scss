@@ -1,0 +1,29 @@
+.toestand {
+  &-projectHeader {
+
+    h1 {
+
+       @media only screen and (max-width: 1023px) {
+      
+        font-size: 2rem;
+      
+
+    }
+    }
+
+    margin-left: $section-margin;
+    margin-right: $section-margin;
+    &__imageContainer {
+      padding: 0;
+      margin-left: 0;
+    }
+    @media only screen and (max-width: 1023px) {
+
+      .feature__grid {
+        flex-direction: column-reverse;
+      }
+    }
+    
+    
+  }
+}

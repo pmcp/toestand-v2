@@ -1,0 +1,26 @@
+taxonomies: true
+title: menu_container
+fields:
+  -
+    handle: menu_items
+    field:
+      type: replicator
+      sets:
+        level_one:
+          display: Item
+          fields:
+            -
+              import: menu
+            -
+              handle: level_two
+              field:
+                type: replicator
+                sets:
+                  options:
+                    display: Keuze
+                    fields:
+                      -
+                        import: menu
+                display: Item
+      display: 'Menu Item'
+      localizable: true

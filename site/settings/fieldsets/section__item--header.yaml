@@ -1,0 +1,39 @@
+sections:
+  main:
+    display: Main
+    fields:
+      description:
+        restrict_assets: false
+        type: redactor
+        localizable: true
+        display: Uitleg
+      images:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Afbeeldingen
+      section__general:
+        fieldset: section__main
+        type: partial
+        display: Algemeen
+      stencil__show:
+        type: toggle
+        display: 'Toon Sjabloon'
+      stencil__image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Sjabloon Afbeelding'
+      stencil__svg:
+        type: text
+        display: 'Sjabloon SVG'
+      style:
+        type: hidden
+        display: style
+        default: header
+taxonomies: false
+title: 'Sectie: Header'
+hide: true

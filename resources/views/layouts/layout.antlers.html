@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Toestand">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <title>{{ title or site_title }}</title>
+<!--     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />-->
+
+<!--    <script>-->
+<!--      function addCss(path) {-->
+<!--        var link = document.createElement('link');-->
+<!--        link.type = 'text/css';-->
+<!--        link.rel = 'stylesheet';-->
+<!--        link.href = path;-->
+<!--        document.head.appendChild(link);-->
+<!--      }-->
+<!--      if('CSS' in window && CSS.supports('color', 'var(&#45;&#45;color-var)')) {-->
+<!--        addCss('{{ theme:css src='site'}}');-->
+<!--      } else {-->
+<!--        addCss('{{ theme:css src='style-fallback'}}');-->
+<!--      }-->
+<!--    </script>-->
+<!--    <noscript>-->
+<!--    <link rel="stylesheet" href="{{ theme:css src='style-falback'}}" >-->
+
+    {{ vite src="resources/css/site.css" }}
+
+<!--  </noscript>-->
+
+
+    {{ if template == 'contact'}}<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />{{ /if }}
+    <!-- <link rel="stylesheet" href="{{ theme:css src='../static/ch'}}"> -->
+    <!-- <link rel="stylesheet" href="{{ theme:css src='app'}}" > -->
+    {{ if template == 'contact'}} <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>{{ /if }}
+
+</head>
+<body class="showWhenCSSLoaded" >
+<body >
+  {{ partial:nav page=""}}
+  {{ template_content }}
+  {{ partial src="newsletter"}}
+  {{ partial src="footer"}}
+
+  <a class="back-to-top js-back-to-top" href="#" data-offset="100" data-duration="300">
+    <svg class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
+  </a>
+
+
+
+    <!-- <script src="{{ theme:js src='../static/scripts.min' }}"></script> -->
+<!--  vite src="resources/css/site.css"-->
+  {{ vite src="resources/js/app.js" }}
+  {{ vite src="resources/js/frontend.js" }}
+<!--    <script async src="{{ theme:js src='frontend' }}"></script>-->
+<!--    <script async src="{{ theme:js src='app.min' }}"></script>-->
+<!--    <script async src="{{ theme:js src='lazyload' }}"></script>-->
+
+    {{ if template == 'contact'}}
+    <script type="text/javascript">
+
+      mapboxgl.accessToken = 'pk.eyJ1IjoicG1jcCIsImEiOiJjanhlbGtyMjUwNHdnM3dxb2hnMXF2czUyIn0.4PxkQ797YuOuCIrHby8sRg';
+      {{ get_content from="/" }}
+
+
+      var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [{{coordinates:long}}, {{coordinates:lat}}],
+          zoom: 15,
+          bearing: 27,
+          pitch: 45,
+      });
+      map.scrollZoom.disable();
+      var chapters = {
+          't-o-e-s-t-a-n-d': {
+              bearing: 27,
+              center: [{{coordinates:long}}, {{coordinates:lat}}],
+              zoom: 15,
+              pitch: 20
+          }
+      }
+      var marker = new mapboxgl.Marker().setLngLat([{{coordinates:long}}, {{coordinates:lat}}]).addTo(map);
+    {{ /get_content }}
+
+
+
+
+        {{nav from = "/projecten" max_depth = "2"}}
+
+        {{if fieldset == 'page_project'}}
+
+          chapters['{{title |  dashify }}'] = {
+          bearing: 27,
+          center: [{{coordinates:long}}, {{coordinates:lat}}],
+          zoom: 15,
+          pitch: 20
+        }
+          new mapboxgl.Marker()
+          .setLngLat([{{coordinates:long}}, {{coordinates:lat}}])
+          .addTo(map);
+        {{/if }}
+
+        {{/nav }}
+
+
+                      var activeChapterName = 't-o-e-s-t-a-n-d';
+
+                      function setActiveChapter(chapterName) {
+
+                          if (chapterName === activeChapterName) return;
+                          map.flyTo(chapters[chapterName]);
+                          activeChapterName = chapterName;
+                      }
+    </script>
+{{ /if }}
+
+
+</body>
+
+</html>

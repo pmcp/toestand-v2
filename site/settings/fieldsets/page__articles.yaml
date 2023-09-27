@@ -1,0 +1,89 @@
+sections:
+  main:
+    display: Main
+    fields:
+      content_bard:
+        buttons:
+          - h2
+          - h3
+          - bold
+          - italic
+          - unorderedlist
+          - orderedlist
+          - removeformat
+          - quote
+          - anchor
+        style: sans
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: false
+        type: bard
+        localizable: true
+        display: content
+        sets:
+          image:
+            display: Afbeelding
+            fields:
+              value:
+                container: main
+                folder: /
+                restrict: false
+                type: assets
+                display: Afbeelding
+          video:
+            display: Video
+            fields:
+              value:
+                type: video
+                display: Video
+          embed:
+            display: embed
+            fields:
+              value:
+                type: textarea
+                display: embed
+  sidebar:
+    display: Sidebar
+    fields:
+      title:
+        display: Titel
+        type: text
+        localizable: true
+      thumb:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Foto
+        max_files: 1
+      live:
+        type: toggle
+        display: Gepubliceerd
+        width: 50
+      show_home:
+        type: toggle
+        width: 50
+        display: 'Toon in overzicht'
+      descr:
+        restrict_assets: false
+        type: redactor
+        localizable: true
+        display: 'Kort inleidend tekstje'
+      published_on:
+        display: Datum
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: false
+        earliest_date: 'January 1, 1900'
+      connections:
+        type: pages
+        display: 'Hoort bij'
+taxonomies: false
+title: 'Pagina: Artikel'
+hide: true

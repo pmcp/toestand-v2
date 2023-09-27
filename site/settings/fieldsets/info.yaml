@@ -1,0 +1,53 @@
+sections:
+  info:
+    display: Info
+    fields:
+      inhoud:
+        fieldset: article
+        type: partial
+        localizable: true
+        display: Inhoud
+  history:
+    display: historiek
+    fields:
+      history_show:
+        type: toggle
+        instructions: 'Toon historiek op deze pagina'
+        localizable: true
+        display: 'Toon geschiedenis'
+        default: 'true'
+      history_title:
+        type: text
+        instructions: 'De titel van het historiek gedeelte'
+        localizable: true
+        display: Titel
+      history_style:
+        options:
+          'no': Links
+          is-centered: Midden
+          is-rtl: Rechts
+        inline: false
+        type: radio
+        display: Stijl
+        default: 'no'
+      id_on_page:
+        type: text
+        instructions: 'Dit is de naam die gebruikt wordt om naar te verwijzen als je vanop een andere pagina (of de menu) naar dit onderdeel linkt.'
+        display: Naam
+  sidebar:
+    display: Algemeen
+    fields:
+      title:
+        display: Titel
+        type: text
+        localizable: true
+      thumbnail:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Foto voor verwijzing'
+taxonomies: true
+title: info
+hide: true

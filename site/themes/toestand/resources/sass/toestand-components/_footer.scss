@@ -1,0 +1,19 @@
+.toestand {
+  &-footer {
+    &__content {
+      margin:0;
+      padding-left:$section-margin;
+      padding-right:$section-margin;
+      background: black;
+      color: #fff;
+    }
+    &__partners {
+
+      img {
+        height: 5rem;
+        width: auto;
+      }
+    }
+  }
+  
+}

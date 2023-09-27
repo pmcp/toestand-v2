@@ -1,0 +1,49 @@
+<main class="toestand-main">
+
+{{ sections }}
+
+  {{ if type == 'section__item--header' }}
+    {{ partial:section__projectheader :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--activities' }}
+    {{ partial:section__weekly :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--weekly' }}
+    {{ partial:section__weekly :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--mission' }}
+    {{ partial:section__mission :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--articles' }}
+    <section id="{{ title | dashify}}" class="toestand-section article-gallery padding-bottom-xl">
+        {{ if show_title }}
+        <h2 class="toestand-section__header padding-bottom-sm">
+            {{ title }}
+        </h2>
+        {{ /if }}
+        <div class="parent grid grid-gap-md toestand-section__content">
+            {{ collection:news scope="article" sort="published_on:desc"}}
+                {{ if page:blueprint == 'home' }}
+                    {{ if article:live == 1 && article:show_home == 1 }}
+                        {{ partial:article_inList}}
+                    {{ /if }}
+                {{ else }}
+                    {{ article:connections }}
+                        {{ if article:live == 1 }}
+                            {{ if page:id == value}}
+                                {{ partial:article_inList}}
+                            {{ /if }}
+                        {{ /if }}
+                    {{ /article:connections }}
+                {{ /if }}
+            {{ /collection:news }}
+        </div>
+    </section>
+
+
+  {{ elseif type == 'section__item--pages' }}
+    {{ partial:section__pages :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--images' }}
+    {{ partial:section__images :title="title" :type="type" :style="style" }}
+  {{ elseif type == 'section__item--text' }}
+    {{ partial:section__text :title="title" :type="type" :style="style" }}
+  {{ else }}
+  {{ /if }}
+{{ /sections }}
+</main>

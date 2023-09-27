@@ -1,0 +1,33 @@
+sections:
+  main:
+    display: Main
+    fields:
+      events:
+        sets:
+          event:
+            display: Event
+            fields:
+              title:
+                type: text
+                display: Titel
+              time:
+                type: text
+                display: Periode
+              text:
+                restrict_assets: false
+                type: redactor
+                display: Tekst
+              style:
+                options:
+                  is-danger: 'Moeilijke periode'
+                  is-primary: Mijlpaal
+                  is-warning: Feest
+                inline: false
+                type: radio
+                display: Stijl
+        type: replicator
+        localizable: true
+        display: Events
+taxonomies: true
+title: History
+hide: true

@@ -1,0 +1,44 @@
+taxonomies: true
+title: Weekdag
+fields:
+  -
+    handle: schedule-weekday__day
+    field:
+      type: text
+      display: 'Naam van de dag'
+  -
+    handle: schedule-weekday__container
+    field:
+      type: grid
+      mode: stacked
+      fields:
+        -
+          handle: schedule-weekday__time
+          field:
+            type: text
+            display: Tijd
+        -
+          handle: schedule-weekday__text
+          field:
+            type: bard
+            restrict_assets: false
+            display: Activiteit
+            save_html: true
+            buttons:
+              - bold
+              - italic
+              - unorderedlist
+              - orderedlist
+              - html
+              - quote
+              - codeblock
+              - h1
+              - h2
+              - h3
+              - h4
+              - h5
+              - h6
+              - anchor
+      display: Activiteit
+      localizable: true
+      add_row: 'Voeg activiteit toe'

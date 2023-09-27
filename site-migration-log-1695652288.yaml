@@ -1,0 +1,119 @@
+-
+  migration: Fieldset
+  handle: project__info
+  warning: 'Redactor field [extra] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.
+-
+  migration: Fieldset
+  handle: project__info
+  warning: 'Redactor field [details] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.-
+  migration: Fieldset
+  handle: main_footer
+  warning: 'Redactor field [footer_content] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.-
+  migration: Fieldset
+  handle: article
+  warning: 'Redactor field [intro] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.-
+  migration: Fieldset
+  handle: menu
+  warning: 'Collection field [menu_item] has been migrated to an entries field.'
+  info: |-
+    Not all config features and settings are compatible.
+    Please revise your entries field configuration as necessary.
+-
+  migration: Fieldset
+  handle: menu
+  warning: 'Collection field [menu_item] has been migrated to an entries field.'
+  info: |-
+    Not all config features and settings are compatible.
+    Please revise your entries field configuration as necessary.
+-
+  migration: Fieldset
+  handle: menu
+  warning: 'Pages field [menu_item] has been migrated to an entries field.'
+  info: |-
+    Not all config features and settings are compatible.
+    Please revise your entries field configuration as necessary.
+-
+  migration: Fieldset
+  handle: menu
+  warning: 'Pages field [menu_item] has been migrated to an entries field.'
+  info: |-
+    Not all config features and settings are compatible.
+    Please revise your entries field configuration as necessary.
+-
+  migration: Fieldset
+  handle: menu
+  warning: 'Collection field [menu_item] has been migrated to an entries field.'
+  info: |-
+    Not all config features and settings are compatible.
+    Please revise your entries field configuration as necessary.-
+  migration: Fieldset
+  handle: schedule-day
+  warning: 'Redactor field [schedule-weekday__text] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.-
+  migration: Fieldset
+  handle: section__item--pages
+  warning: 'Pages field [pages] has been migrated to an entries field.'
+  info: |-
+    Not all config features and settings are compatible.
+    Please revise your entries field configuration as necessary.-
+  migration: Fieldset
+  handle: section__item--header
+  warning: 'Redactor field [description] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.-
+  migration: Fieldset
+  handle: section__item--text
+  warning: 'Redactor field [text] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.-
+  migration: Collection
+  handle: history
+  warning: 'Redactor field [text] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.-
+  migration: Collection
+  handle: news
+  warning: 'Redactor field [descr] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.
+-
+  migration: Collection
+  handle: news
+  warning: 'Pages field [connections] has been migrated to an entries field.'
+  info: |-
+    Not all config features and settings are compatible.
+    Please revise your entries field configuration as necessary.-
+  migration: Collection
+  handle: partners
+  warning: 'Redactor field [descr] has been migrated to bard.'
+  info: |-
+    Not all redactor features and settings are bard-compatible.
+    Please revise your bard configuration as necessary.
+-
+  migration: Collection
+  handle: partners
+  warning: 'Pages field [connections] has been migrated to an entries field.'
+  info: |-
+    Not all config features and settings are compatible.
+    Please revise your entries field configuration as necessary.-
+  migration: 'Asset container'
+  handle: main
+  error: 'Assets folder cannot be found at path [assets].'

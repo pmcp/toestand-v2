@@ -1,0 +1,20 @@
+.toestand-section__text {
+  columns: 3;
+  column-gap: 2em;
+}
+
+@media only screen and (max-width: 1023px) {
+  .toestand-section__text {
+    column-count: 2 !important;
+  }
+
+
+}
+
+@media only screen and (max-width: 550px) {
+  .toestand-section__text {
+    column-count: 1 !important;
+  }
+
+
+}

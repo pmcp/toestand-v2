@@ -1,0 +1,24 @@
+title: 'Pagina: Project'
+sections:
+  sections:
+    display: Secties
+    fields:
+      -
+        import: sections__project
+  info:
+    display: Info
+    fields:
+      -
+        import: project__info
+      -
+        handle: template
+        field:
+          type: hidden
+          default: home
+      -
+        handle: type
+        field:
+          type: hidden
+          display: type
+          default: project
+taxonomies: true

@@ -1,0 +1,10 @@
+---
+roles:
+  - d32e14fb-08c9-44c2-aaf8-21200852bafd
+email: fred@toestand.be
+first_name: Fred
+last_name: Fred
+id: 33280b1a-e1cb-4ff0-9a28-cdd832e7311a
+password_hash: $2y$10$UiOg3zF.g3OoiYbNDSSL2OQTj61/KIy/QjvN.YLKx43piuQb5cy/q
+---
+Fred is a toestand admin

@@ -1,0 +1,19 @@
+<section id="{{ title | dashify}}" class="toestand-section article-gallery padding-bottom-xl">
+  {{ if show_title }}    
+    <h2 class="toestand-section__header padding-bottom-sm">
+      {{ title }}
+    </h2>
+  {{ /if }}
+  <div class="parent  toestand-section__content text-component toestand-section__text" style="column-count: {{column-count}};">
+
+      {{ text }}
+    </div>
+  
+  {{ if text__bottom }}
+    {{ partial src="section__textBottom"}}
+  {{ /if }}
+  
+  {{ if buttons }}
+    {{ partial src="section__buttonsBottom"}}
+  {{ /if}}
+</section>

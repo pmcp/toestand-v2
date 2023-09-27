@@ -1,0 +1,82 @@
+sections:
+  main:
+    display: Menu
+    fields:
+      menu_item:
+        sets:
+          news:
+            display: Nieuws
+            fields:
+              menu_item:
+                collection:
+                  - news
+                type: collection
+                display: 'Menu Item'
+                mode: tags
+              override:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+          project:
+            display: Project
+            fields:
+              menu_item:
+                collection:
+                  - projects
+                type: collection
+                display: 'Menu Item'
+                mode: tags
+              override:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+          page:
+            display: Pagina
+            fields:
+              menu_item:
+                type: pages
+                display: Pagina
+              override:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+          page_part:
+            display: 'Onderdeel op pagina'
+            fields:
+              menu_item:
+                type: pages
+                display: Pagina
+              id_on_page:
+                type: text
+                display: Onderdeel
+              override:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+          project_part:
+            display: 'Onderdeel op project'
+            fields:
+              menu_item:
+                type: collection
+                display: Project
+                collection:
+                  - projects
+                max_items: '1'
+              id_on_page:
+                type: text
+                display: Onderdeel
+              override:
+                type: text
+                instructions: 'Vul dit in als je niet de titel van de pagina wil gebruiken, maar zelf een titel wil kiezen in de menu.'
+                display: 'Naam in menu'
+        type: replicator
+        localizable: true
+        display: 'Menu Item'
+        instructions: 'Kies 1 item (niet meer!)'
+      highlight:
+        type: toggle
+        instructions: 'Wil je dit menu element een opvallende kleur geven?'
+        display: highlight
+taxonomies: true
+title: menu_item
+hide: true

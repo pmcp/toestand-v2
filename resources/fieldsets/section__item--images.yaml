@@ -1,0 +1,20 @@
+taxonomies: false
+title: 'Sectie: Afbeeldingen'
+fields:
+  -
+    import: section__main
+  -
+    handle: images
+    field:
+      type: assets
+      container: main
+      folder: /
+      restrict: false
+      display: Afbeeldingen
+      localizable: true
+  -
+    handle: style
+    field:
+      type: hidden
+      display: style
+      default: carousel

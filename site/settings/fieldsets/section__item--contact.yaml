@@ -1,0 +1,16 @@
+sections:
+  main:
+    display: Main
+    fields:
+      section__general:
+        fieldset: section__main
+        type: partial
+        display: Algemeen
+        localizable: true
+      style:
+        type: hidden
+        display: style
+        default: contact
+taxonomies: false
+title: 'Sectie: Contact'
+hide: true

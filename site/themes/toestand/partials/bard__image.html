@@ -1,0 +1,34 @@
+{{ if (value | length) > 3 }}
+  <div class="vue-carouselApp container margin-top-lg margin-bottom-xl max-width-lg">
+    <div class="toestand-images__popup" :class="{'toestand-images__popup--active': showImage}">
+      <img :src="image" @click="closePopup">
+    </div>
+    <swiper :options="swiperOptionMission">
+    {{ value }}
+      <swiper-slide style="width: auto;">        
+        <img @click="clickImage('{{value}}')" src="{{ glide:value height="400" }} "  @click="$event.target.classList.toggle('active')">
+      </swiper-slide>
+    {{ /value }}
+    <div
+      class="swiper-button-prev display@sm "
+      slot="button-prev"
+    ></div>
+    <div
+      class="swiper-button-next display@sm "
+      slot="button-next"
+    ></div>
+    <div
+      class="swiper-scrollbar"
+      slot="scrollbar"
+    ></div>
+  </swiper>
+</div>
+{{ else }}
+  <div class="images__single container max-width-sm margin-top-xl">
+    {{ value }}
+      <img src="{{ value }}">
+    {{ /value }}    
+  </div>
+{{ /if }}
+  
+

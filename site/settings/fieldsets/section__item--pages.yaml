@@ -1,0 +1,20 @@
+sections:
+  main:
+    display: Main
+    fields:
+      section__general:
+        fieldset: section__main
+        type: partial
+        display: Algemeen
+        localizable: true
+      pages:
+        type: pages
+        display: Paginas
+        mode: panes
+      style:
+        type: hidden
+        display: style
+        default: grid
+taxonomies: false
+title: 'Sectie: Paginas'
+hide: true

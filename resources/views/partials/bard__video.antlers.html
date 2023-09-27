@@ -1,0 +1,18 @@
+<div class="container max-width-sm">
+  
+{{ if value | is_embeddable }}
+    <!-- Youtube and Video -->
+    
+    <div class="embed-container margin-y-lg">
+      <iframe src='{{ value | embed_url }}' frameborder='0' allowfullscreen></iframe></div>
+    
+{{ else }}
+
+    <!-- Other HTML5 video types -->
+    <video controls class="max-width-sm margin-y-lg" style="width:100%;height: auto">
+      <source src="{{ value | embed_url }}"" type="video/mp4">
+    Your browser does not support the video tag.
+    </video> 
+    
+{{ /if }}
+</div>

@@ -1,0 +1,17 @@
+{{ collection :from="{collection|piped}" scope="article" sort="date:desc" }}
+  {{ if parent:fieldset == 'home' }}
+    {{ if article:live == 1 && article:show_home == 1 }}
+      {{ partial:article_inList}}
+    {{ /if }}
+  {{ else }}
+
+    {{ article:connections }}
+
+      {{ article:parent:id }}
+      {{ if (article:parent:id == value) }}
+        test
+      {{ /if }}
+  {{ /article:connections }}
+
+  {{ /if }}
+{{ /collection }}

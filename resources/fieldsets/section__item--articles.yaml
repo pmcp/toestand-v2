@@ -1,0 +1,22 @@
+taxonomies: false
+title: 'Sectie: Artikels'
+fields:
+  -
+    import: section__main
+  -
+    handle: bg__image
+    field:
+      type: toggle
+      display: Achtergrondafbeelding
+  -
+    handle: collection
+    field:
+      type: collections
+      max_items: 10
+      display: Collection
+  -
+    handle: style
+    field:
+      type: hidden
+      display: style
+      default: carousel

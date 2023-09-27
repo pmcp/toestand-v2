@@ -1,0 +1,15 @@
+php artisan cache:cleartree:
+  -
+    entry: ee46a9e8-f672-4cdc-aa08-04c3c943b0b1
+  -
+    entry: d91cd0aa-b8f3-406e-bb9b-b7fbdbbf9a3f
+  -
+    entry: aee8fc41-d4ff-4d68-b57e-9064a431febb
+  -
+    entry: 82d78c12-3597-447c-a532-75a99a1001b8
+  -
+    entry: 2cac704a-dd68-479c-9f3f-52e6cedd2c2c
+  -
+    entry: 1f7184a6-6989-48ae-af1c-3b449bd0b9c9
+  -
+    entry: 5e1e24bc-503e-4d00-bd8f-a4d004998309

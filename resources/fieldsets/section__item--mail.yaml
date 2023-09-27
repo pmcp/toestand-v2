@@ -1,0 +1,23 @@
+taxonomies: false
+title: 'Sectie: Mail'
+fields:
+  -
+    import: section__main
+  -
+    handle: subtitle
+    field:
+      type: text
+      localizable: true
+      display: Ondertitel
+  -
+    handle: text
+    field:
+      type: text
+      localizable: true
+      display: Tekst
+  -
+    handle: style
+    field:
+      type: hidden
+      display: style
+      default: normal

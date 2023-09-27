@@ -1,0 +1,96 @@
+sections:
+  article-content:
+    display: Inhoud
+    fields:
+      intro:
+        restrict_assets: false
+        type: redactor
+        localizable: true
+        display: intro
+      article-header__image:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Hoofdafbeelding
+        localizable: true
+      article-sections:
+        sets:
+          section:
+            display: Sectie
+            fields:
+              section_title:
+                type: text
+                display: Titel
+              in_overview:
+                type: toggle
+                display: 'In inhoudstafel'
+                default: 'false'
+              bard:
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                style: sans
+                spellcheck: true
+                allow_source: true
+                allow_internal_links: true
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                semantic_elements: false
+                restrict_assets: false
+                sets:
+                  image:
+                    display: Afbeelding
+                    fields:
+                      value:
+                        container: main
+                        folder: /
+                        restrict: false
+                        type: assets
+                        display: Afbeelding
+                  video:
+                    display: Video
+                    fields:
+                      value:
+                        type: video
+                        display: Video
+                type: bard
+                display: Inhoud
+              id_on_page:
+                type: text
+                display: 'Naam op pagina'
+        type: replicator
+        display: Secties
+        localizable: true
+      date:
+        display: Date
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: false
+        earliest_date: 'January 1, 1900'
+  sidebar:
+    display: Algemeen
+    fields:
+      title:
+        display: Titel
+        type: text
+        localizable: true
+      thumbnail:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Foto voor verwijzing'
+taxonomies: false
+title: Article
+hide: true

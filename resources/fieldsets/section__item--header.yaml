@@ -1,0 +1,61 @@
+taxonomies: false
+title: 'Sectie: Header'
+fields:
+  -
+    handle: description
+    field:
+      type: bard
+      restrict_assets: false
+      localizable: true
+      display: Uitleg
+      save_html: true
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - html
+        - quote
+        - codeblock
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - anchor
+  -
+    handle: images
+    field:
+      type: assets
+      container: main
+      folder: /
+      restrict: false
+      display: Afbeeldingen
+  -
+    import: section__main
+  -
+    handle: stencil__show
+    field:
+      type: toggle
+      display: 'Toon Sjabloon'
+  -
+    handle: stencil__image
+    field:
+      type: assets
+      container: main
+      folder: /
+      restrict: false
+      max_files: 1
+      display: 'Sjabloon Afbeelding'
+  -
+    handle: stencil__svg
+    field:
+      type: text
+      display: 'Sjabloon SVG'
+  -
+    handle: style
+    field:
+      type: hidden
+      display: style
+      default: header

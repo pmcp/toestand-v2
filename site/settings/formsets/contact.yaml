@@ -1,0 +1,7 @@
+title: Subscribe
+fields:
+  email:
+    display: 'Email Address'
+    validate: required|email
+columns:
+  - email

@@ -1,0 +1,18 @@
+title: 'Pagina: Kalender'
+sections:
+  sections:
+    display: Secties
+    fields:
+      -
+        handle: placeholder_image
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          max_files: 1
+          display: 'Placeholder Afbeelding'
+  info:
+    display: Info
+    fields: {  }
+taxonomies: true

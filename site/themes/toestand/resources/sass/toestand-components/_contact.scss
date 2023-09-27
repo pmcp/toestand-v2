@@ -1,0 +1,20 @@
+.toestand {
+  
+  &-contact {
+    &__content {
+      padding-left: $section-margin;
+    padding-right: $section-margin;
+    }
+    &__item {
+      cursor: pointer;
+      li {
+        list-style: none;
+      }
+      &:hover {
+        h2 {
+          color: #D1634D;
+        }
+      }
+    }
+  }
+}

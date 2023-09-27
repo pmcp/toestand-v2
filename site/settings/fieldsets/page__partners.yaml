@@ -1,0 +1,65 @@
+sections:
+  main:
+    display: Main
+    fields:
+      content_bard:
+        buttons:
+          - h2
+          - h3
+          - bold
+          - italic
+          - unorderedlist
+          - orderedlist
+          - removeformat
+          - quote
+          - anchor
+        style: sans
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: false
+        type: bard
+        localizable: true
+        display: content
+        sets:
+          image:
+            display: Afbeelding
+            fields:
+              value:
+                container: main
+                folder: /
+                restrict: false
+                type: assets
+                display: Afbeelding
+          video:
+            display: Video
+            fields:
+              value:
+                type: video
+                display: Video
+          embed:
+            display: embed
+            fields:
+              value:
+                type: textarea
+                display: embed
+  sidebar:
+    display: Sidebar
+    fields:
+      title:
+        display: Titel
+        type: text
+        localizable: true
+      published_on:
+        display: Datum
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: false
+        earliest_date: 'January 1, 1900'
+taxonomies: false
+title: 'Partners pagina'

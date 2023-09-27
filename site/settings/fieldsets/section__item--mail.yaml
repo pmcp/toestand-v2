@@ -1,0 +1,23 @@
+sections:
+  main:
+    display: Main
+    fields:
+      section__general:
+        fieldset: section__main
+        type: partial
+        display: Algemeen
+      subtitle:
+        type: text
+        localizable: true
+        display: Ondertitel
+      text:
+        type: text
+        localizable: true
+        display: Tekst
+      style:
+        type: hidden
+        display: style
+        default: normal
+taxonomies: false
+title: 'Sectie: Mail'
+hide: true

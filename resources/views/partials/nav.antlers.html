@@ -1,0 +1,88 @@
+<header class="toestand-nav f-header js-f-header bg hide-nav  js-hide-nav--main margin-bottom-lg" data-mobile-trigger='js-anim-menu-btn'>
+
+
+    <div class="toestand-nav__utility">
+      <ul class="f-header__list flex-grow flex-basis-0 justify-end@md toestand-nav__utility--search">
+        <li class="f-header__item">
+        <form class="expandable-search  js-expandable-search" action="/search" method="GET">
+          <label class="sr-only" for="q">Search</label>
+          <input class="reset expandable-search__input js-expandable-search__input" type="search" name="q" id="searchInputX" placeholder="{{ translations:text:search_form }}">
+          <button class="reset expandable-search__btn">
+            <svg class="icon" viewBox="0 0 24 24"><title>Search</title><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor" fill="none" stroke-miterlimit="10"><line x1="22" y1="22" x2="15.656" y2="15.656"></line><circle cx="10" cy="10" r="8"></circle></g></svg>
+          </button>
+        </form>
+
+        </li>
+        <li class="f-header__item toestand-nav__languages ">
+            {{ locales }}
+              {{ if !first }} 
+                <li class="padding-x-xxxs padding-bottom-xxxs text-md"><a href="{{ url }}">{{ locale:name }}</a></li> 
+            {{ /if }}
+          {{ /locales }}
+        </li>
+      </ul>
+      
+      {{ partial:socials}}
+      
+      {{ partial:newsletter_button }}
+    </div>
+
+
+  <div class="f-header__mobile-content container ">
+    <a href="/" class="toestand-nav__logo f-header__logo">
+      <svg width="32" height="32"  viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <title>Go To Homepage</title>
+        <path d="M14 2.7057V0H0V2.7057H5.64341V6.38546H0V9.09116H5.64341V21.7538H8.35659V9.09116H14V6.38546H8.35659V2.7057H14Z" fill="black"/>
+      </svg>
+    </a>
+
+    <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
+      <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="f-header__nav toestand-nav " role="navigation">
+
+    <div class="f-header__nav-grid justify-start@md container ">
+      <div class="f-header__nav-logo-wrapper toestand-nav__logo">
+        <a href="/" class="f-header__logo toestand-nav__logo  ">
+          <svg width="32" height="32"  viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <title>Go To Homepage</title>
+            <path d="M14 2.7057V0H0V2.7057H5.64341V6.38546H0V9.09116H5.64341V21.7538H8.35659V9.09116H14V6.38546H8.35659V2.7057H14Z" fill="black"/>
+          </svg>
+        </a>
+      </div>
+      
+      <ul class="f-header__list flex-grow flex-basis-0 justify-start@md max-width-sm">
+
+        <li class="toestand-nav__item f-header__item"><a href="/" class="f-header__link" {{ if is_current || is_parent ||  fieldset == 'home'}}aria-current="page"{{/if}}>Toestand</a>
+
+
+<!--          <div class="subnav height-lg {{ unless segment_1 }}subnav&#45;&#45;active{{ /unless }} {{ if parent == '' }} subnav&#45;&#45;active {{ /if }} flex justify-start">-->
+<!--            <ul class="subnav__list padding-y-sm">-->
+<!--                {{ nav from="/" max_depth="2" }}-->
+<!--                  {{ if !hide_from_nav }}<li class="subnav__item"><a href="{{ url }}" class="padding-x-md" {{ if is_current || is_parent }} {{ if is__current && parent == '' }} aria-current="page"{{ /if }} {{ /if }}>{{ title }}</a></li>{{ /if }}-->
+<!--              {{ /nav }}-->
+<!--            </ul>-->
+<!--          </div>-->
+        </li>
+
+        {{ nav from="/projecten" max_depth="2" }}
+          <li class="toestand-nav__item f-header__item "><a href="{{ url }}" class="f-header__link" {{ if is_current || is_parent }}aria-current="page"{{/if}}>{{ title }}</a>
+
+            <div class="subnav  height-lg {{ if (children | length) < 1 }} subnav--empty  {{ /if }} {{ if is_current || is_parent }}subnav--active{{ /if }} flex justify-start">
+                <ul class="subnav__list padding-y-sm">
+
+                  {{ children }}
+                    <li class="subnav__item" ><a href="{{ url }}" class="padding-x-md" {{ if is_current || is_parent }}aria-current="page"{{ /if }}>{{ title }}</a></li>
+                  {{ /children }}
+                </ul>
+            </div>
+
+          </li>
+        {{ /nav }}   
+      </ul>
+    </div>
+  </div>
+  
+</header>

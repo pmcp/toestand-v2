@@ -1,0 +1,7 @@
+driver: local
+auto_index: true
+default_index: default
+searchable:
+  - title
+  - content
+  - events

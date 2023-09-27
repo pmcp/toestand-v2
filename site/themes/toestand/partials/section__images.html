@@ -1,0 +1,45 @@
+<section id="{{ title | dashify}}" class="toestand-section toestand-images article-gallery padding-top-md">
+  {{ if show_title }}    
+    <h2 class="toestand-section__header padding-bottom-sm">
+      {{ title }}
+    </h2>
+  {{ /if }}
+
+
+  <div class="vue-carouselApp ">
+    <div class="toestand-images__popup" :class="{'toestand-images__popup--active': showImage}">
+      <img :src="image" @click="closePopup">
+    </div>
+    <swiper :options="swiperOptionMission">
+  
+      {{ assets:images }}
+        
+        <swiper-slide>        
+          <img @click="clickImage('{{url}}')" src="{{ glide:url height="400" width="auto" }} " class="height-xxxxl " @click="$event.target.classList.toggle('active')">
+        </swiper-slide>
+      {{ /assets:images }}
+  
+      {{ if text__bottom }}
+        {{ partial src="section__textBottom"}}
+      {{ /if }}
+  
+      {{ if buttons }}
+        {{ partial src="section__buttonsBottom"}}
+      {{ /if}}
+    
+      <div
+        class="swiper-button-prev display@sm "
+        slot="button-prev"
+      ></div>
+      <div
+        class="swiper-button-next display@sm "
+        slot="button-next"
+      ></div>
+      <div
+        class="swiper-scrollbar"
+        slot="scrollbar"
+      ></div>
+    </swiper>
+  </div>
+</section>
+  

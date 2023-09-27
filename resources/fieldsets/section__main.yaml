@@ -1,0 +1,22 @@
+taxonomies: false
+title: 'Sectie: Algemene Settings'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+      width: 50
+      localizable: true
+  -
+    handle: show_title
+    field:
+      type: toggle
+      width: 25
+      display: 'Toon titel'
+  -
+    handle: in_menu
+    field:
+      type: toggle
+      width: 25
+      display: 'In menu'

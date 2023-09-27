@@ -1,0 +1,26 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: collection
+        field:
+          type: collections
+          display: Collectie
+          localizable: true
+      -
+        handle: template
+        field:
+          type: hidden
+          display: template
+          default: collection
+  sidebar:
+    display: sidebar
+    fields:
+      -
+        handle: hide_from_nav
+        field:
+          type: toggle
+          display: 'Verberg in navigatie'
+taxonomies: true
+title: 'Pagina: Collectie'

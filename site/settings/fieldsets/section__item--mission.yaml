@@ -1,0 +1,30 @@
+sections:
+  main:
+    display: Main
+    fields:
+      section__general:
+        fieldset: section__main
+        type: partial
+        display: Algemeen
+      items:
+        sets:
+          mission__inner:
+            display: Missie
+            fields:
+              mission__language:
+                type: text
+                display: Taal
+                width: 33
+              mission__text:
+                type: text
+                display: Tekst
+                width: 66
+        type: replicator
+        display: Missie
+      style:
+        type: hidden
+        display: style
+        default: carousel
+taxonomies: false
+title: 'Sectie: Missie'
+hide: true

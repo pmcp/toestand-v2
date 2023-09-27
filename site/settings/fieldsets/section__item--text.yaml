@@ -1,0 +1,24 @@
+sections:
+  main:
+    display: Main
+    fields:
+      section__general:
+        fieldset: section__main
+        type: partial
+        display: Algemeen
+        localizable: true
+      text:
+        restrict_assets: false
+        type: redactor
+        localizable: true
+        display: Tekst
+      column-count:
+        type: integer
+        display: 'Aantal kolommen'
+      style:
+        type: hidden
+        display: style
+        default: contact
+taxonomies: false
+title: 'Sectie: Text'
+hide: true

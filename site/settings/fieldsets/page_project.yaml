@@ -1,0 +1,26 @@
+title: 'Pagina: Project'
+sections:
+  sections:
+    display: Secties
+    fields:
+      home__sections:
+        fieldset: sections__project
+        type: partial
+        display: Secties
+  info:
+    display: Info
+    fields:
+      info:
+        fieldset: project__info
+        type: partial
+        display: Info
+        localizable: true
+      template:
+        type: hidden
+        default: home
+      type:
+        type: hidden
+        display: type
+        default: project
+taxonomies: true
+hide: true

@@ -1,0 +1,12 @@
+title: Globals
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: keys
+        field:
+          type: array
+          display: Keys
+          localizable: true
+taxonomies: true

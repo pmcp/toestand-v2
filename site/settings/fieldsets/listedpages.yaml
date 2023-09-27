@@ -1,0 +1,30 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        type: text
+        display: Titel
+        localizable: true
+      pages:
+        sets:
+          page:
+            display: page
+            fields:
+              page_id:
+                max_items: 1
+                type: pages
+                display: page_id
+              button:
+                type: text
+                display: 'Tekst op knop'
+              extra_text:
+                restrict_assets: false
+                type: redactor
+                display: 'Extra tekst'
+        type: replicator
+        display: pages
+        localizable: true
+taxonomies: false
+title: 'Pagina''s in lijst'
+hide: true

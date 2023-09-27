@@ -1,0 +1,11 @@
+.toestand {
+  &-title {
+    display: inline;
+    padding-right: 6rem;
+    padding-bottom: 0;
+    border-bottom: none;
+    &--alt {
+      background-image: linear-gradient(transparent 60%, #fff 0%);
+    }
+  }
+} 

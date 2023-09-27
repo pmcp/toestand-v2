@@ -1,0 +1,19 @@
+taxonomies: false
+title: 'Sectie: Paginas'
+fields:
+  -
+    import: section__main
+  -
+    handle: pages
+    field:
+      type: entries
+      display: Paginas
+      mode: panes
+      collections:
+        - pages
+  -
+    handle: style
+    field:
+      type: hidden
+      display: style
+      default: grid

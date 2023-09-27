@@ -1,0 +1,23 @@
+<ul class="f-header__list socials-v2__btns flex flex-wrap padding-x-sm toestand-nav__socials">
+  {{ if social_media }}
+    {{ social_media }}
+      <li>
+        <a class= "padding-x-sm sharebar__btn js-social-share socialIcon" href="{{ link }}" target="_blank">
+          {{ icon }}
+        </a>
+      </li>
+    {{ /social_media }}
+  {{ else }}
+    {{ get_content from="/" }}
+      {{ if social_media}}   
+        {{ social_media }}
+        <li>
+          <a class="padding-x-sm sharebar__btn js-social-share socialIcon" href="{{ link }}" target="_blank">
+            {{ icon }}
+          </a>
+        </li>
+        {{ /social_media }}
+      {{ /if }}
+    {{ /get_content }}
+  {{ /if }}
+</ul> 

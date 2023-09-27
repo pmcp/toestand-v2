@@ -1,0 +1,39 @@
+taxonomies: false
+title: 'Sectie: Text'
+fields:
+  -
+    import: section__main
+  -
+    handle: text
+    field:
+      type: bard
+      restrict_assets: false
+      localizable: true
+      display: Tekst
+      save_html: true
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - html
+        - quote
+        - codeblock
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - anchor
+  -
+    handle: column-count
+    field:
+      type: integer
+      display: 'Aantal kolommen'
+  -
+    handle: style
+    field:
+      type: hidden
+      display: style
+      default: contact

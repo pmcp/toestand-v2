@@ -1,0 +1,8 @@
+title: Subscribe
+fields:
+  -
+    handle: email
+    field:
+      type: text
+      display: 'Email Address'
+      validate: required|email

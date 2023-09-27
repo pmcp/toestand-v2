@@ -1,0 +1,30 @@
+sections:
+  main:
+    display: Main
+    fields:
+      menu_items:
+        sets:
+          level_one:
+            display: Item
+            fields:
+              items:
+                fieldset: menu
+                type: partial
+                display: Items
+              level_two:
+                sets:
+                  options:
+                    display: Keuze
+                    fields:
+                      item:
+                        fieldset: menu
+                        type: partial
+                        display: 'Kies een item'
+                type: replicator
+                display: Item
+        type: replicator
+        display: 'Menu Item'
+        localizable: true
+taxonomies: true
+title: menu_container
+hide: true

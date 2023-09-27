@@ -1,0 +1,11 @@
+title: Globals
+sections:
+  main:
+    display: Main
+    fields:
+      keys:
+        type: array
+        display: Keys
+        localizable: true
+taxonomies: true
+hide: true

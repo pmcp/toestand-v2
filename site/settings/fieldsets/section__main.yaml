@@ -1,0 +1,20 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        type: text
+        display: Titel
+        width: 50
+        localizable: true
+      show_title:
+        type: toggle
+        width: 25
+        display: 'Toon titel'
+      in_menu:
+        type: toggle
+        width: 25
+        display: 'In menu'
+taxonomies: false
+title: 'Sectie: Algemene Settings'
+hide: true
