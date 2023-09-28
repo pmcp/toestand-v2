@@ -2,3 +2,7 @@ name: pmcp
 super: true
 id: a7c84b26-a328-4494-a948-af6b132ebd6b
 password_hash: $2y$10$wEZ2pXCuv5ZRvUWhaBXZV.MYmOHX38hpH2UehtMw97OEDvwCOVO9.
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing

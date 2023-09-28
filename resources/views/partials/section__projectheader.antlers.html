@@ -1,37 +1,38 @@
 
-<section class="feature feature--text-offset feature--invert@md margin-y-xl@md margin-y-sm@sm toestand-projectHeader toestand-section"> 
+<section class="feature feature--text-offset feature--invert@md margin-y-xl@md margin-y-sm@sm toestand-projectHeader toestand-section">
     <div class="" >
       <div class="feature__grid grid  items-center">
         <div class="col-4@md">
           <div class="feature__item">
             <!-- <div class="feature__label margin-bottom-xxs">En project van Toestand</div> -->
-    
+
             <div class="text-component">
               <h1 class="text-xxxl feature__text-offset-item@md padding-xxxxs has-padding@md " style="background-color:white;">{{ title }}</h1>
               <div class="feature__text-offset-item@md padding-sm margin-bottom-md has-padding@md" style="background-color:white;">{{ description }} </div>
               {{ if social_media }}
               <div class="socials-v5__btns toestand-social feature__text-offset-item@md pa3">
-                
+
                   {{ social_media}}
                     <a href="{{ link }}" target="blank">{{ icon }} </a>
                   {{ /social_media }}
-                
+
               </div>
               {{ /if }}
             </div>
-      
-            
           </div>
         </div>
-      
+
         <div class="col-8@md toestand-projectHeader__imageContainer">
           <div class="feature__item feature__item--media">
-            <figure>
-                {{ if images}} <!-- Check if there are images -->  
+              <figure>
+
+                {{ if images}} <!-- Check if there are images -->
                 {{ if stencil__show }} <!-- Check if we want to show a stencil over the image. This will set the height -->
                   {{ if stencil__image }} <!-- Check if there is an image (this has hierarchy over svg, no real reason, but chances that there is an image rather than an svg is realistic) -->
                     {{ images }}
-                      <div style="background: url({{ value }});background-repeat: no-repeat;background-size: cover;">
+                        ??? {{ url }}
+
+                      <div style="background: url({{ url }});background-repeat: no-repeat;background-size: cover;">
                       <img src="{{ stencil__image}}"
                         alt="Masked image"
                       >
@@ -48,7 +49,8 @@
                     {{ /if }}
                 {{ else }} <!-- If no stencil, just show the image -->
                   {{ images }}
-                    <img src="{{ value }}" style="width:100vw;height:auto" alt="Masked image">
+
+                    <img src="{{ url }}" style="width:100vw;height:auto" alt="Masked image">
                   {{ /images }}
                 {{ /if }}
               {{ /if }}
