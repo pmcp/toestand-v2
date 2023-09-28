@@ -1,7 +1,0 @@
-title: Historiek
-fieldset: history
-order: number
-searchable:
-  - title
-  - year
-  - text

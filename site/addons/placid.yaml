@@ -1,4 +1,0 @@
-dribbble:
-    url: 'https://jsonplaceholder.typicode.com/todos'
-    cache: 1
-    refresh: 60
