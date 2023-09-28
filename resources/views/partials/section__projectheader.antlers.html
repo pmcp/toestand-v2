@@ -30,7 +30,7 @@
                 {{ if stencil__show }} <!-- Check if we want to show a stencil over the image. This will set the height -->
                   {{ if stencil__image }} <!-- Check if there is an image (this has hierarchy over svg, no real reason, but chances that there is an image rather than an svg is realistic) -->
                     {{ images }}
-                        ??? {{ url }}
+                        {{ url }}
 
                       <div style="background: url({{ url }});background-repeat: no-repeat;background-size: cover;">
                       <img src="{{ stencil__image}}"
